@@ -1,0 +1,22 @@
+import math
+
+def manhattan(coord1, coord2):
+    x0, y0 = coord1
+    x1, y1 = coord2
+    return abs(x1 - x0) + abs(y1 - y0)
+
+def euclidiana(coord1, coord2):
+    x0, y0 = coord1
+    x1, y1 = coord2
+    return math.sqrt((x1 - x0)**2 + (y1 - y0)**2)
+
+
+coord1 = (1, 2)
+coord2 = (4, 6)
+
+distancia_manhattan = manhattan(coord1, coord2)
+distancia_euclidiana = euclidiana(coord1, coord2)
+
+print(f"Distancia Manhattan: {distancia_manhattan}")
+
+print(f"Distancia Euclidiana: {distancia_euclidiana}")
